@@ -54,3 +54,14 @@ UrlManager will generate 5 url rules and bind to the controller, like the follow
 ),
 
 ```
+
+## ChangeLog 
+
+**Version v1.0.1**
+
+- Added composer supported
+- Added namespace supported
+
+**Version v1.0.0**
+
+- First release
