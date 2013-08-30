@@ -57,7 +57,7 @@ UrlManager will generate 5 url rules and bind to the controller, like the follow
 
 ## ChangeLog 
 
-**Version v1.0.1**
+**Version v1.0.1 and v1.0.2**
 
 - Added composer supported
 - Added namespace supported
