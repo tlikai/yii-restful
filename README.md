@@ -6,9 +6,18 @@
 
 ## Installation
 
-* Download [yii-restful.zip](https://github.com/tlikai/yii-restful/archive/master.zip)
-* Unzip this file
-* Move directory `src/*` to `your-project/protected/extensions/yii-restful`
+Add depend to your project composer.json file
+
+```
+{
+    "require": {
+        "yii/yiisoft": "dev-master",
+        "likai/yii-restful": "dev-master"
+    }
+}
+```
+
+After, run `composer update` update composer packages
 
 ## Usage
 
@@ -17,8 +26,9 @@
 ```
 return array(
     'urlManager'=>array(
-        'class' => 'ext.yii-restful.Likai.YiiRestful.RestfulManager',
+        'class' => 'Likai\\YiiRestful\\UrlManager',
         'urlFormat' => 'path',
+        'showScriptName' => false,
         'resources' => arary(
             'topics',
         ),
@@ -26,7 +36,7 @@ return array(
 );
 ```
 
-RestfulManager will generate 5 url rules and bind to the controller, like the following
+UrlManager will generate 5 url rules and bind to the controller, like the following
 ```
 `GET` http://yourdomain/topics          => TopicsController::actionIndex
 `GET` http://yourdomain/topics/{id}     => TopicsController::actionShow
