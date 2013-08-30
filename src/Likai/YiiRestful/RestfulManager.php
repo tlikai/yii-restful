@@ -1,4 +1,4 @@
-<?php
+<?php namespace Likai\YiiRestful;
 /**
  * Yii RESTful URL Manager
  *
@@ -6,11 +6,11 @@
  * @link http://youyuge.com/
  */
 
-class RestfulManager extends \CUrlManager
+class UrlManager extends \CUrlManager
 {
     public $resources;
 
-    protected $actions = array('index', 'show', 'create', 'update', 'delete'); 
+    protected $actions = array('index', 'show', 'create', 'update', 'delete');
 
     protected $resourcePatterns = array(
         'index'  => array('<controller>/index', 'pattern' => '<controller:({resources})>', 'verb' => 'GET'),
