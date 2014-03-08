@@ -29,7 +29,7 @@ return array(
         'class' => 'Likai\\YiiRestful\\UrlManager',
         'urlFormat' => 'path',
         'showScriptName' => false,
-        'resources' => arary(
+        'resources' => array(
             'topics',
         ),
     ),
@@ -47,10 +47,10 @@ UrlManager will generate 5 url rules and bind to the controller, like the follow
 
 ### 2. Specified parameters
 ```
-'resources' => arary(
+'resources' => array(
     'topics',
-    array('posts', 'only' => array('index', 'create')), // just bind Posts::index, Posts::create action
-    array('users', 'except' => array('delete', 'update'), // except Posts::delete, Posts::update action
+    array('posts', 'only' => array('index', 'create')), // just bind PostsController::actionIndex, PostsController::actionCreate action
+    array('users', 'except' => array('delete', 'update')), // except UsersController::actionDelete, UsersController::actionUpdate action
 ),
 
 ```
